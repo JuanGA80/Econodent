@@ -346,22 +346,25 @@ header i {
   flex-direction: column;
   color: black;
 }
-.swiper-up h3, .swiper-up h4 {
+.swiper-up h3, .swiper-up h4, .promotions h4, .promotions h3 {
   text-align: center;
 }
 .txt-us h4, 
 .swiper-up h4,
-.container-direction h4 {
+.container-direction h4,
+.promotions h4 {
   font-size: 20px;
   font-weight: 300;
 }
 .txt-us h3, 
 .swiper-up h3,
-.container-direction h3 {
+.container-direction h3,
+.promotions h3 {
   font-size: 2em;
   font-weight: 300;
 }
-.txt-us hr, .swiper-up hr, .container-direction hr, .container-footer hr {
+.txt-us hr, .swiper-up hr, .container-direction hr, .container-footer hr,
+.promotions hr {
   color: #28B0D1;
   width: 100px;
   border: 1px solid;
@@ -527,6 +530,84 @@ header i {
   width: max-content;
   place-content: center;
 }
+/*Botones Flotantes*/
+.botones-flotantes {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 13;
+}
+.botones-flotantes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.275s ease-in-out;
+}
+.botones-flotantes #whats {
+  background-color: #3cb878;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.botones-flotantes #tel {
+  background-color: gray;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.botones-flotantes #whats:hover {
+  background-color: #268353;
+}
+.botones-flotantes #tel:hover {
+  background-color: rgb(55, 55, 55);
+}
+.botones-flotantes img {
+  width: 40px;
+}
+.botones-flotantes #menu-contacto {
+  background-color: #2973ba;
+  z-index: 14;
+  position: relative;
+  width: 75px;
+  height: 75px;
+}
+.botones-flotantes #menu-contacto:hover {
+  background-color: #1d5283;
+}
+.show-whats {
+  right: 90px !important;
+}
+.show-tel {
+  bottom: 90px !important;
+}
+.promotions {
+  flex-direction: column;
+  padding: 60px 1rem;
+}
+.grid-promotions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 40px;
+}
+.grid-promotions img {
+  width: 100%;
+  transition: all 0.275s ease-in-out;
+  border: 5px solid gold;
+}
+.grid-promotions a:hover > img{
+  transition: all 0.275s ease-in-out;
+  transform: rotate(10deg);
+}
 @media (min-width: 768px) {
   .header-1 {
     height: 95px;
@@ -646,11 +727,12 @@ header i {
     max-width: 400px;
   }
   .txt-us h3, .swiper-up h3,
-  .container-direction h3 {
+  .container-direction h3, .promotions h3 {
     font-size: 3em;
   }
   .txt-us h4, .swiper-up h4,
-  .container-direction h4 {
+  .container-direction h4,
+  .promotions h4 {
     font-size: 1.5em;
   }
   .txt-us p {
@@ -705,5 +787,9 @@ header i {
   }
   .container-us-2 {
     padding: 0;
+  }
+  .grid-promotions {
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    gap: 60px;
   }
 }
