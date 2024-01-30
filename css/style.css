@@ -775,6 +775,9 @@ header i {
     height: 600px;
     max-width: 500px;
     padding: 30px;
+    -webkit-box-shadow: -13px 0px 20px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -13px 0px 20px -7px rgba(0,0,0,0.75);
+    box-shadow: -13px 0px 20px -7px rgba(0,0,0,0.75);
   }
   .container .container-footer {
     display: grid;
