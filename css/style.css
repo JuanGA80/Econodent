@@ -792,7 +792,7 @@ header i {
     padding: 0;
   }
   .grid-promotions {
-    grid-template-columns: repeat(2, minmax(300px, 400px));
+    grid-template-columns: repeat(3, minmax(300px, 400px));
     gap: 60px;
   }
 }
