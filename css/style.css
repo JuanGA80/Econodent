@@ -396,7 +396,7 @@ header i {
   color: #28B0D1;
 }
 .container-us {
-  background-image: url(../img/dentist-elements.jpg);
+  background-image: url(../img/dentist-elements.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -486,7 +486,7 @@ header i {
 }
 .footer-1 {
   background-color: black;
-  padding: 40px 1rem;
+  padding: 40px 1rem 10px 1rem;
 }
 .container-footer {
   flex-direction: column;
@@ -606,7 +606,7 @@ header i {
 }
 .grid-promotions a:hover > img{
   transition: all 0.275s ease-in-out;
-  transform: rotate(10deg);
+  transform: rotate(5deg);
 }
 @media (min-width: 768px) {
   .header-1 {
