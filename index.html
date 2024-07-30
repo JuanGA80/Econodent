@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <title>Econodent</title>
+  <title>Saes Dent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- Open Graph data -->
@@ -28,9 +29,21 @@
     gtag('config', 'AW-11439398776');
     gtag('config', 'G-934WCB7TDE');
   </script>
+  <script>
+    function agregarServicio() {
+    var servicio = prompt("Ingrese el nombre del nuevo servicio:");
+    if (servicio) {
+      var listaServicios = document.getElementById("lista-servicios");
+      var nuevoServicio = document.createElement("div");
+      nuevoServicio.classList.add("servicio");
+      nuevoServicio.textContent = servicio;
+      listaServicios.appendChild(nuevoServicio);
+    }
+  }
+  </script>
 </head>
 <body>
-  <section class="container header-1">
+  <!-- <section class="container header-1">
     <div class="container-max">
       <div class="container-up">
         <a href="tel:6251504375">
@@ -55,19 +68,21 @@
       </div>
       <a href="https://api.whatsapp.com/send?phone=526251504375" target="_blank" class="agendar calendar" rel="noopener noreferrer"><i class="bi bi-calendar"></i> Agendar una cita</a>
     </div>
-  </section>
+  </section> -->
   <header class="container">
     <div class="container-max">
       <img id="logo" src="img/logo.png" alt="Logo Econodent">
       <i class="bi bi-list" id="open"></i>
       <div class="links">
         <a href="/">Inicio</a>
-        <a href="#Nosotros">Nosotros</a>
-        <a href="#Servicios">Servicios</a>
+        <!-- <a href="#Nosotros">Nosotros</a> -->
+        <a href="#Tratamientos">Tratamientos</a>
+        <a href="#Servicios">Servicios </a>
         <a href="#Promociones">Promociones</a>
-        <a href="#Testimonios">Testimonios</a>
+        
+        <!-- <a href="#Testimonios">Testimonios</a> -->
         <a href="#Ubicacion">Ubicación</a>
-        <a class="btn-num" href="https://api.whatsapp.com/send?phone=526251504375">6251504375</a>
+        <a class="btn-num" href="https://api.whatsapp.com/send?phone=526251504375">Teléfono</a>
       </div>
     </div>
   </header>
@@ -76,73 +91,132 @@
       <i class="bi bi-x-lg" id="close"></i>
       <img src="img/logo.png" alt="Logo Econodent">
       <a href="/">Inicio</a>
-      <a href="#Nosotros">Nosotros</a>
+      <!-- <a href="#Nosotros">Nosotros</a> -->
+      <a href="#Tratamientos">Tratamientos</a>
       <a href="#Servicios">Servicios</a>
-      <a href="#Promociones">Promociones</a>
-      <a href="#Testimonios">Testimonios</a>
+    
+      <!-- <a href="#Testimonios">Testimonios</a> -->
       <a href="#Ubicacion">Ubicación</a>
-      <a href="https://api.whatsapp.com/send?phone=526251504375">6251504375</a>
+      <a class="btn-num" href="https://api.whatsapp.com/send?phone=526251504375">Teléfono</a>
     </div>
   </div>
-  <section class="container hero-bg">
-    <div class="container hero-container">
-      <div class="hero-txt">
-        <h1>Dentista a tu alcance</h1>
-        <p>Si has llegado hasta aquí, probablemente lleves un tiempo pensando en llevar a cabo ese tratamiento dental que va a cambiar tu sonrisa. Y es que, cuando se trata de salud, solamente queremos estar en las mejores manos.</p>
-        <a href="#Servicios">Ver Servicios</a>
-      </div>
-      <div class="agenda">
-        <div class="agenda-txt">
-          <i class="bi bi-calendar"></i> 
-          <h3>Agenda Ahora</h3>
-          <a href="https://api.whatsapp.com/send?phone=526251504375" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Más información</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="container container-servicios" id="Servicios">
-    <div class="container-max-1200 servi"> 
-      <h3>RECUPERA TU MEJOR SONRISA CON NUESTROS TRATAMIENTOS</h3>
-      <p class="subtitle">Somos una clínica dental 100% integral, ya que llevamos a cabo todo tipo de procedimientos, desde una limpieza dental hasta implantes y cirujías maxilofaciales.</p>
-      <div class="container-cards">
-        <div class="servicios" id="services">
-          <div class="card-servicio">
-            <img src="img/ortodoncia.svg" alt="Ortodoncia Imagotipo">
-            <h4>Ortodoncia</h4>
-            <p>Con la ortodoncia logramos alinear los dientes, y conseguimos una correcta relación entre los dientes superiores e inferiores.</p>
-            <a href="https://api.whatsapp.com/send?phone=526251504375">Ver más</a>
-          </div>
-          <div class="card-servicio">
-            <img src="img/ortopedia.svg" alt="Ortopedia Imagotipo">
-            <h4>Ortopedia Dental</h4>
-            <p>La ortopedia está dirigida a niños entre 4 y 12 años para corregir problemas de paladar o mandíbula mediante el uso de alineadores.</p>
-            <a href="https://api.whatsapp.com/send?phone=526251504375">Ver más</a>
-          </div>
-          <div class="card-servicio">
-            <img src="img/protesis.svg" alt="Prótesis Imagotipo">
-            <h4>Prótesis</h4>
-            <p>Mediante la pérdida de uno o más dientes, existe la opción de reponerlos mediante el uso de una prótesis dental fija.</p>
-            <a href="https://api.whatsapp.com/send?phone=526251504375">Ver más</a>
-          </div> 
-        </div>
-        <button id="show-services">Ver todos los servicios</button>
-        <button id="hide-services">Ocultar servicios</button>
-      </div>
-    </div>
-  </section>
+  <!-- Nosotros -->
   <section class="container container-us" id="Nosotros">
     <div class="container-max-1200 nosotros">
       <img src="img/nosotros.webp" alt="Doctor">
       <div class="txt-us">
-        <h4>Te damos la bienvenida a</h4>
-        <h3>ECONODENT</h3>
-        <hr>
-        <p>Somos una clínica dental ubicada en Chihuahua, tenemos un equipo relativamente joven, pero con mucha experiencia. Nos caracteriza el profesionalismo, honestidad, amabilidad, higiene y limpieza. Estaremos encantados de atenderte.</p>
-        <a href="#">Conoce más</a>
+        <h3>Saes Dent</h3>
+        
+        <p>En nuestra clínica dental, nos comprometemos a ofrecer la más alta calidad en todos nuestros servicios.
+           Utilizamos materiales de primera calidad y trabajamos con especialistas de confianza para garantizar 
+           resultados estéticos excepcionales en todos nuestros tratamientos. Nos enorgullece brindar una atención 
+           cálida y de calidad a nuestros pacientes, asegurándonos de que se sientan cómodos y bien cuidados 
+           durante todo su tratamiento.</p>
+        <a href="#Servicios">Ver Servicios</a>
       </div>
     </div>
   </section>
-  <section class="container swiper-up" id="Testimonios">
+  <!-- Info -->
+  <section class="container hero-bg">
+    <div class="container hero-container">
+      <div class="hero-txt">
+        <h1>Especialistas de confianza.</h1>
+        <p>Atención de calidad y calidez en los servicios para nuestros pacientes.</p> <br>
+        <a href="#Servicios">Ver Servicios</a>
+      </div>
+     
+    </div>
+  </section>
+  <!-- tratamientos -->
+  <section class="container container-tratamientos" id="Tratamientos">
+    <div class="container-max-1200 servi"> 
+      <h3>Tratamientos</h3>
+      <div class="container-cards">
+        <div class="tratamientos " id="tratamientos">
+        
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="card-tratamientos">
+            <div class="icono">
+              <img src="icons/endodoncia.png" alt="Icono"> 
+            </div>
+            <h4>Endodoncistas</h4>
+            <p>Con la ortodoncia logramos alinear los dientes, y conseguimos una correcta relación entre los dientes superiores e inferiores.</p>
+          </div>
+          </a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="card-tratamientos">
+            <img src="icons/periodoncistas.png" alt="">
+            <h4> Periodoncistas</h4>
+            <p>La ortopedia está dirigida a niños entre 4 y 12 años para corregir problemas de paladar o mandíbula mediante el uso de alineadores.</p>
+          </div>
+          </a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="card-tratamientos">
+            <img src="icons/cirujano.png" alt="">
+            <h4>Cirujanos Maxilofaciales</h4>
+            <p>Mediante la pérdida de uno o más dientes, existe la opción de reponerlos mediante el uso de una prótesis dental fija.</p>
+          </div> 
+          </a>
+
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="card-tratamientos">
+          <img src="icons/implantologos.png" alt="">
+          <h4>Implantólogos</h4>
+          <p>La ortopedia está dirigida a niños entre 4 y 12 años para corregir problemas de paladar o mandíbula mediante el uso de alineadores.</p>
+        </div>
+        </a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+        <div class="card-tratamientos">
+          <img src="icons/orthodontists.png" alt="">
+          <h4>Ortodoncistas</h4>
+          <p>La ortopedia está dirigida a niños entre 4 y 12 años para corregir problemas de paladar o mandíbula mediante el uso de alineadores.</p>
+        </div>
+        </a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+        <div class="card-tratamientos">
+          <img src="icons/pediatria.png" alt="">
+          <h4>Odontopediatras</h4>
+          <p>La ortopedia está dirigida a niños entre 4 y 12 años para corregir problemas de paladar o mandíbula mediante el uso de alineadores.</p>
+        </div>
+        </a>
+        
+          </div> 
+        </div>
+
+      </div>
+    </div>
+  </section>
+   <!-- Servicios -->
+   <section class="container  container-servicios" id="Servicios">
+    <div class="container-servicios servi"> 
+    <h2>Nuestros Servicios</h2>
+  </div>
+      <div class="half">
+          <!-- Elementos del carrusel -->
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Tratamiento de resinas</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Limpiezas dentales</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Tratamiento para manchas blancas y marrones</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Blanqueamientos dentales.</div></a>
+        
+      </div>
+      <div class="half">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Prótesis fija</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Prótesis removible</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Prótesis totales</div></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
+          <div class="item" >Tratamientos de diseño de sonrisa sin desgaste</div></a>
+      </div>
+  </section>
+  
+  <!-- <section class="container swiper-up" id="Testimonios">
+
     <h4>Conoce la opinión más importante,</h4>
     <h3>NUESTROS PACIENTES</h3>
     <hr>
@@ -231,59 +305,70 @@
       <div class="swiper-button-prev"></div>              
       <div class="swiper-button-next"></div>              
     </div>
-  </section>
-  <section class="container" id="Promociones">
+  </section> -->
+  <!-- Promociones -->
+  <section class="container container-promociones" id="Promociones">
     <div class="container-max-1200 promotions">
-      <h4>Conoce nuestros descuentos</h4>
-      <h3>EXCLUSIVOS</h3>
-      <hr>
+      
+      <h3>Promociones </h3>
+      <br>
       <div class="grid-promotions">
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=526251504375"> 
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225"> 
           <img src="img/promociones/promo-1.webp" alt="Promoción brackets iniciales desde $500">
         </a> 
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=526251504375">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225">
           <img src="img/promociones/promo-2.webp" alt="Promociones implante dental desde $15,000">
         </a>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=526251504375">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=527711172225">
           <img src="img/promociones/promo-3.webp" alt="Promoción de diseño de sonrisa desde $21,000">
         </a>
       </div>
     </div>
   </section>
+ 
   <section class="container container-us-2">
     <div class="container-max-1200 nosotros">
       <img src="img/mujer.webp" alt="Doctor">
       <div class="txt-us">
-        <h4>Razones para elegirnos como</h4>
-        <h3>TU DENTISTA EN CHIHUAHUA</h3>
-        <hr>
+        <h3>Beneficios destacados </h3>
+        
+        
         <ul>
-          <li>Nos caracterizan valores como la honestidad, profesionalismo y transparencia.</li>
-          <li>Nos esmeramos en ofrecer la mejor atención, siempre amables y cuidadosos.</li>
-          <li>Ofrecemos una atención personalizada.</li>
+          <li>Ofrecemos en nuestros tratamientos una alta estética dental.</li>
+          <li>Contamos con materiales de diferentes precios de acuerdo a su
+            economía para diferentes tratamientos.</li>
+          <li>Atención de calidad y calidez en los servicios para nuestros
+            pacientes.</li>
           <li>Contamos con un maravilloso equipo de trabajo con conocimientos modernos y actualizados.</li>
-          <li>Estamos certificados por distintas asociaciones.</li>
         </ul>
         <a href="">Conoce más sobre nosotros</a>
       </div>
     </div>
   </section>
-  <section class="container" style="padding: 0 1rem;" id="Ubicacion">
-    <div class="container-max-1200 container-direction">
-      <h4>Dónde puedes encontrar tu clínica</h4>
-      <h3>ECONODENT</h3>
-      <hr>
+  <section class="container container-ubicacion"  id="Ubicacion">
+    <div class="container-max-1200 container-direction correcion">
+      <h4>Ubicacion</h4>
+      <h3>Saes Dent</h3>
+      
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.3693388030815!2d-106.06797708936031!3d28.64865788324742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea4356f7007f69%3A0x4e39c443c34602d7!2sEconodent%20Cuauht%C3%A9moc!5e0!3m2!1ses!2smx!4v1705441693659!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="container-map">
-          <h4>CONTÁCTANOS</h4>
-          <p>¿Tienes alguna necesidad dental en especial? Te podemos ayudar. Déjanos tus datos y nuestro equipo se pondrá en contacto contigo lo más pronto posible.</p>
-          <h4>DIRECCIÓN</h4>
-          <p>Av. Benito Juárez, Cuauhtémoc, Zona Centro, 31500 Chihuahua, Chih.</p>
+          <h4>¿Tienes preguntas o necesitas más información?</h4>
+          <p>Estamos aquí para ayudarte. Si tienes alguna duda, 
+            comentario o necesitas más detalles sobre nuestros servicios, no dudes en contactarnos. 
+          </p>
+          <h4>DIRECCIÓNES </h4>
+          <p>Emiliano Carranza, No. 108, Colonia Revolución, Pachuca de soto, Hidalgo, México C.P. 42060 </p>
+          <p>Calle 16 de Septiembre,Col. Raúl Lozano Ramñirez, Santiago Tulantpec, Hidalgo .</p> <br>
+          <p>Calle Ignacio Allende 504, Centro, 42000 Pachuca de Soto, Hgo</p><br>
           <h4>HORARIOS</h4>
-          <p>Lun - Vie: 10am - 14pm</p>
-          <p>Lun - Vie: 15pm - 19pm</p>
-          <a href="https://api.whatsapp.com/send?phone=526251504375" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Más información</a>
+          <p> Lunes a Domingo, 10 a.m. - 8 p.m.</p>
+          
+          <div class="contact-icons">
+          <a href="https://api.whatsapp.com/send?phone=527711172225" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+          <a href="rveralazcano@icloud.com?subject=Consulta%20sobre%20servicios&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.%20Gracias." target="_blank" ><i<i class="bi bi-envelope"></i> </i></a> 
+        </div>
+          
         </div>
       </div>
     </div>
@@ -294,37 +379,70 @@
         <a href="/">
           <img src="img/logo.png" alt="Logo ECONODENT">
         </a>
-        <a href="https://maps.app.goo.gl/spre5ieGvZKNcfos5" target="_blank">Av. Benito Juárez, Cuauhtémoc, Zona Centro, 31500 Chihuahua, Chih.</a>
-        <hr>
       </div>
       <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
         <h3>SÍGUENOS</h3>
         <div class="social-media">
-          <a href="tel:6251504375" target="_blank" rel="noopener noreferrer"><i class="bi bi-telephone-fill"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=526251504375" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://www.facebook.com/Econodent.Clinica?mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/clinica_econodent?igsh=bTFxazZwZmg1M2t1" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <a href="tel:52 771 117 2225" target="_blank" rel="noopener noreferrer"><i class="bi bi-telephone-fill"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=527711172225" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.facebook.com/SaesDent" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/SAES_DENT/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
       <div class="part-final">
-        <h4>Derechos reservados ECONODENT. ® - 2023</h4>
+        <h4>Derechos reservados SaesDent. ® - 2024</h4>
         <a href="https://dentarios.com.mx" target="_blank" rel="noopener noreferrer"> Diseño y estrategia SEO por Agencia Dentarios.</a>
       </div>
     </div>
   </footer>
   <div class="botones-flotantes">
-    <a id="whats" href="https://api.whatsapp.com/send?phone=526251504375" target="_blank">
+    <a id="whats" href="https://api.whatsapp.com/send?phone=527711172225" target="_blank">
       <i class="bi bi-whatsapp"></i>
     </a>
-    <a id="tel" href="https://api.whatsapp.com/send?phone=526251504375" target="_blank">
+    <a id="tel" href="https://api.whatsapp.com/send?phone=527711172225" target="_blank">
       <i class="bi bi-phone"></i>
     </a>
     <a id="menu-contacto">
       <img src="img/mensaje.png" alt="mensaje">
     </a>
   </div>
+  <script>
+    // Función para verificar si un elemento está completamente visible en la ventana
+function isElementInViewport(elem) {
+    var rect = elem.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Función para activar la animación cuando la sección es visible
+function activateAnimation() {
+    var items = document.querySelectorAll('.half .item');
+    
+    items.forEach(function(item) {
+        if (isElementInViewport(item)) {
+            item.classList.add('animate');
+        } else {
+            item.classList.remove('animate');
+        }
+    });
+}
+
+// Evento que se activa cuando se hace scroll en la página
+window.addEventListener('scroll', function() {
+    activateAnimation();
+});
+
+// Activa la animación cuando carga la página (si la sección está inicialmente visible)
+activateAnimation();
+
+  </script>
   <script src="js/swiperjs.js"></script>
   <script src="js/services.js"></script>
   <script src="js/menu.js"></script>
+  
 </body>
 </html>
