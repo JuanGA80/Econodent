@@ -26,8 +26,8 @@ body {
   height: 100vh;
 }
 .container {
- 
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -43,22 +43,11 @@ body {
   align-items: center;
 }
 .container .container-max-1200 {
-
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 1rem;
-}
-.container .container-servicios {
-
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  width: 60%; /* Ancho completo del contenedor */
-  text-align: center; /* Centra el texto horizontalmente */
-  padding: 20px; /* Espaciado interior */
-  box-sizing: border-box; /* El padding se incluye en el ancho */
- 
-
 }
 .container-up {
   display: flex;
@@ -82,7 +71,7 @@ body {
 }
 header {
   height: 100px;
-  background-color: 	 #445566;
+  background-color: black;
   transition: all 0.275s ease-in;
   z-index: 11;
 }
@@ -103,7 +92,7 @@ header i {
 }
 .links a {
   color: white;
-  padding: 10px 9px;
+  padding: 10px 15px;
   margin-left: 10px;
   border-radius: 10px;
   transition: all 0.2s linear;
@@ -185,11 +174,6 @@ header i {
     width: 0%;
   }
 }
-@keyframes slideUp {
-  to {
-      transform: translateY(0);
-  }
-}
 /*Animaciones*/
 .hero-container {
   flex-direction: column;
@@ -201,29 +185,26 @@ header i {
   position: relative;
 }
 .hero-bg {
-  background-color: #172237;
+  background: linear-gradient(45deg, rgba(37,207,214,0.97) 46%, rgba(0,212,255,1) 100%);
 }
 .hero-container .hero-txt {
-
-  background-color: transparent;
+  background-color: #2e9eba;
   padding: 20px 1rem 60px 1rem;
- 
+  position: absolute;
   bottom: -220px;
 }
 .hero-container .hero-txt h1 {
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 10px;
   color: white;
 }
 .hero-container .hero-txt p {
   color: white;
   margin-bottom: 20px;
-  margin-right: 10rem;
 }
 .hero-container .hero-txt a {
   padding: 10px 25px;
-  background-color: #2e9eba;
-  color: white;
+  background-color: aliceblue;
   transition: all 0.275s ease-in;
   border-radius: 5px;
 }
@@ -256,16 +237,11 @@ header i {
 }
 .agenda .agenda-txt a,
 .container-map a {
-  display: inline-block;
-  width: 40px; /* Ancho de cada icono */
-  height: 40px; /* Altura de cada icono */
-  background-color: #f0f0f0; /* Color de fondo del icono */
-  text-align: center;
-  line-height: 40px; /* Centrado vertical del contenido */
-  border-radius: 50%; /* Forma redonda */
-  margin: 10px; /* Espacio entre los iconos */
-  color: #333; /* Color del texto */
-  text-decoration: none; /* Quitar subrayado del enlace */
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  transition: all 0.275s linear;
 }
 .agenda .agenda-txt a:hover,
 .container-map a:hover {
@@ -273,9 +249,8 @@ header i {
   background-color: black;
   color: white;
 }
-.container-tratamientos {
-  margin-bottom: 10rem;
-  margin-top: 40px;
+.container-servicios {
+  margin-top: 400px;
   flex-direction: column;
   padding: 0 1rem;  
   text-align: center;
@@ -283,109 +258,36 @@ header i {
 .servi {
   flex-direction: column;
 }
-h3{
-        font-size: 2rem;
-        max-width: 900px;
-        font-weight: 300;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #333;
-        margin: 20px auto;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-}
-.container-servicios{
-  background-color: #172337; /* Color de fondo del contenedor */
-  
-    text-align: center; /* Alineación central del contenido */
-    padding: 20px; /* Espaciado alrededor del contenido */
-}
-
-
-.item {
-  font-size: 15px;
-  color: white;
-  min-width: 100%;
-  flex: 0 0 auto;
-  padding: 3px;
-  box-sizing: border-box;
-  height: 60px;
-  transform: translateY(100%);
-  padding: 10px;
-
-}
-.item:hover {
-  background-color: #555;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.item.animate {
-  animation: slideUp 1.5s ease forwards;
-}
-.container .container-servicios {
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-.container-servicios h2 {
-  font-size: 1.2rem;
-  max-width: 900px;
-  font-weight: 300;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
-    margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
-}
-
-
-.container-tratamientos > p {
+.container-servicios > p {
   margin: 10px 0 35px 0;
 }
-.tratamientos {
+.servicios {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  place-items: center;
   place-content: center;
   gap: 50px;
 }
-.card-tratamientos {
-  margin: 10px;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 8px;
+.card-servicio {
+  display: flex;
+  justify-content: space-evenly;  
+  padding: 25px;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  box-shadow: 7px 7px 16px -1px rgba(197, 197, 197, 0.99); /* Sombra */
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+
+  -webkit-box-shadow: 7px 7px 16px -1px rgba(197, 197, 197,0.99);
+  -moz-box-shadow: 7px 7px 16px -1px rgba(197, 197, 197,0.99);
+  box-shadow: 7px 7px 16px -1px rgba(197, 197, 197, 0.99);
 }
-
-.card-tratamientos h3 {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.card-tratamientos p {
-  font-size: 14px;
-  color: #666666;
-}
-
-.card-tratamientos .icono {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-
-
 .subtitle {
   margin: 10px 0;
 }
-.card-tratamientos a {
+.card-servicio a {
   padding: 10px 50px; 
   background-color: #28B0D1;
   border-radius: 5px;
@@ -394,14 +296,14 @@ h3{
   bottom: -20px;
   transition: all 0.275s linear;
 }
-.card-tratamientos a:hover {
+.card-servicio a:hover {
   transition: all 0.275s linear;
   background-color: black;
 }
-.card-tratamientos h4 {
+.card-servicio h4 {
   font-size: 1.4em;
 }
-.container .container-max-1200 .card-tratamientos img {
+.container .container-max-1200 .card-servicio img {
   width: 80px;
 }
 .container-cards {
@@ -430,14 +332,13 @@ h3{
 }
 .nosotros {
   flex-direction: column;
+  padding: 50px 0;
 }
 .nosotros img {
   width: 80%;
-  border-radius: 2rem; 
-  margin: 2rem;
-
+  border: 5px solid white;
+  margin-bottom: 20px;
 }
-
 .txt-us {
   display: flex;
   justify-content: center;
@@ -482,12 +383,7 @@ h3{
   background-color: black;
 }
 .txt-us p {
-  max-width: 450px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  font-size: 16px;
-  text-align: justify;
-  line-height: 1.6;
+  color: black;
 }
 .txt-us ul {
   text-align: left;
@@ -500,12 +396,13 @@ h3{
   color: #28B0D1;
 }
 .container-us {
-  background-color:#d5dbe6 ;
+  background-image: url(../img/dentist-elements.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 60px 1rem;
   text-align: center;
+  margin-bottom: 40px;
 }
 .swiper-container{
   position: relative;
@@ -549,12 +446,14 @@ h3{
   color: goldenrod;
 }
 .container-us-2 {
- 
+  background-image: url(../img/bg-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   padding: 30px 1rem;
   text-align: center;
   margin-top: 40px;
-  background-color: #dadada;
+  background-color: rgba(194, 194, 194, 0.108);
 }
 .container-direction {
   flex-direction: column;
@@ -567,7 +466,7 @@ h3{
 .container-map {
   border-radius: 10px;
   padding: 30px 1rem;
-  background: #3b3c3e;
+  background: linear-gradient(45deg, rgba(37,207,214,0.97) 46%, rgba(0,212,255,1) 100%);
   margin: 20px 0;
   color: white;
   display: flex;
@@ -602,7 +501,6 @@ h3{
   color: white;
 }
 .container-footer h3 {
-  color: white;
   margin-bottom: 20px;
   font-size: 1.5em;
 }
@@ -710,7 +608,6 @@ h3{
   transition: all 0.275s ease-in-out;
   transform: rotate(5deg);
 }
-
 @media (min-width: 768px) {
   .header-1 {
     height: 95px;
@@ -728,10 +625,6 @@ h3{
   }
   .container-up > a, .container-up a[href='https://maps.app.goo.gl/WLSRnCCKR9vqRTX19'] {
     display: block;
-  }
-  .container-promociones{
-    margin-top: 5rem;
-    padding: 0 7rem;
   }
   .agendar {
     display: flex;
@@ -765,6 +658,7 @@ h3{
   }
   .hero-container .hero-txt {
     position: relative;
+    bottom: 0;
     background-color: transparent;
     margin-left: 10vw;
     max-width: 470px;
@@ -777,32 +671,16 @@ h3{
   .hero-container .hero-txt h1, 
   .hero-container .hero-txt p {
     color: white;
-    
   }
   .hero-container .hero-txt p {
     font-size: 20px;
   }
-  .container .container-servicios {
-    max-width: 1200px;
-    width: 50%; 
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-
   .agenda {
     bottom: -100px;
     width: 350px;
     right: 100px;
     height: 250px;
   }
-  .contact-icons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 200px; /* Ancho máximo del div */
-    margin: 0 auto; /* Centrar el div */
-}
   .agenda .agenda-txt {
     width: 100%;
     height: 100%;
@@ -814,24 +692,15 @@ h3{
   .agenda .agenda-txt > i {
     font-size: 35px;
   }
-  .container-tratamientos {
-    margin-top: 90px;
-    padding: 0 7rem;
+  .container-servicios {
+    margin-top: 130px;
   }
-  .container-tratamientos h3 {
-    font-size: 2.8rem; /* Tamaño grande */
-    max-width: 900px; /* Ancho máximo para controlar la extensión */
-    font-weight: 300; /* Peso ligero */
-    font-family: 'Roboto', sans-serif; /* Ejemplo de una fuente elegante */
-    text-align: center; /* Centrado del texto */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    text-transform: uppercase; /* Mayúsculas */
-    color: #333; /* Color del texto */
-    margin: 20px auto; /* Margen automático para centrar verticalmente */
-    border-bottom: 2px solid #ccc; /* Línea decorativa */
-    padding-bottom: 10px; /* Espacio debajo del título */
+  .container-servicios h3 {
+    font-size: 2.8em;
+    max-width: 900px;
+    font-weight: 300;
   }
-  .container-tratamientos .subtitle {
+  .container-servicios .subtitle {
     margin-top: 20px;
     font-size: 20px;
     max-width: 700px;
@@ -843,104 +712,32 @@ h3{
     margin-top: 70px;
     font-size: 20px;
   }
-  .tratamientos {
+  .servicios {
     grid-template-columns: repeat(3,1fr);
   }
   .container-us {
     background-position: center center;
     padding: 80px 1rem;
-    
+    margin-top: 40px;
   }
   .nosotros {
     flex-direction: row;
   }
   .nosotros img {
     max-width: 400px;
-
   }
   .txt-us h3, .swiper-up h3,
   .container-direction h3, .promotions h3 {
-    font-size: 2.8rem;
-    max-width: 900px;
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #333;
-    
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+    font-size: 3em;
   }
-
-.container .container-max-1200  {
- 
-  display: flex;
-  align-items: center;
-}
-
-
-  .half {
-    
-    justify-content: space-around;
-}
-
-.container-servicios{
-  display: flex; /* Usa flexbox para alinear verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 600px; /* Ocupa toda la altura disponible del contenedor padre */
-  background-color: #172337; /* Color de fondo del contenedor */
-}
-
-
-.container-servicios h2 {
-    font-size: 2.8rem;
-    max-width: 900px;
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin: 0;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-}
-.item{
-  font-size: 20px;
-  color: white; 
-  min-width: 100%; /* Ancho mínimo de cada elemento (100% del contenedor) */
-  flex: 0 0 auto; /* No crece ni se encoge, tamaño fijo */
-  box-sizing: border-box; /* El padding se incluye en el ancho */
-  text-align: center; /* Centrado del texto */
-  margin-bottom: 20px; /* Espacio entre cada elemento */
-  transform: translateY(100%);
-
-  }
-  .item.animate {
-    animation: slideUp 1.5s ease forwards;
-}
-  .item:hover {
-    background-color: #555; /* Color de fondo al hacer hover */
-    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave al hacer hover */
-}
-
   .txt-us h4, .swiper-up h4,
   .container-direction h4,
   .promotions h4 {
     font-size: 1.5em;
-    max-width: 600px; /* Ancho máximo del texto para controlar el espacio */
-    margin-left: 20px; 
   }
   .txt-us p {
     max-width: 450px;
-    font-family: 'Roboto', sans-serif; /* Cambia 'Roboto' por la fuente que prefieras */
-    font-weight: 100; /* Ajusta el peso de la fuente según sea necesario */
-    font-size: 16px; /* Tamaño de la fuente */
-    text-align: justify; /* Justifica el texto */
-    line-height: 1.6; /* Espaciado entre líneas */
+    font-size: 1.2em;
   }
   .txt-us {
     align-items: flex-start;
@@ -995,7 +792,7 @@ h3{
     padding: 0;
   }
   .grid-promotions {
-    grid-template-columns: repeat(3, minmax(200px, 400px));
+    grid-template-columns: repeat(3, minmax(300px, 400px));
     gap: 60px;
   }
 }
